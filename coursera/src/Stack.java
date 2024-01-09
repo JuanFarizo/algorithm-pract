@@ -1,7 +1,7 @@
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class Stack<T> implements Iterable<T> {
+public class Stack implements Iterable<T> {
     Node<T> top;
     int height;
 
@@ -38,7 +38,7 @@ public class Stack<T> implements Iterable<T> {
     }
 
     public void push(T value) {
-        Node<T> node = new Node(value);
+        var node = new Node<T>(value);
         if (height != 0) {
             node.next = top;
         }
@@ -69,11 +69,11 @@ public class Stack<T> implements Iterable<T> {
     }
 
 
-    class Node<T> {
-        T value;
-        Node<T> next;
+    class Node<B> {
+        B value;
+        Node<B> next;
 
-        public Node(T value) {
+        public Node(B value) {
             this.value = value;
         }
     }

@@ -31,7 +31,7 @@ public class QueueString {
     }
 
 
-    class Node {
+    class Node {    
         String item;
         Node next;
 
