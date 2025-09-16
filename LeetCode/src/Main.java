@@ -9,12 +9,45 @@ import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
-        String[] nums1 = { "eat", "tea", "tan", "ate", "nat", "bat" };
-        int[] nums2 = { 4, 1, -1, 2, -1, 2, 3 };
-        int[] ints = topKFrequent(nums2, 2);
+        System.out.println(numJewelsInStones("aA", "aAAbbbb"));
+    }
 
-        System.out.println(Arrays.toString(ints));
-        System.out.println("Hello world!");
+    public static boolean isRectangleOverlap(int[] rec1, int[] rec2) {
+        
+        return false;
+    }
+
+    public static int numJewelsInStones(String jewels, String stones) {
+        int counter = 0;
+        char[] stonesArr = stones.toCharArray();
+        char[] jewelsArr = jewels.toCharArray();
+        for (char s : stonesArr) {
+            for (char j : jewelsArr) {
+                if (s == j) counter++;
+            }
+        }
+        return counter;
+    }
+
+    public static String[] fizzBuzz(int n) {
+        String[] arr = new String[n];
+        for(int i = 1; i <= n; i++) {
+            String ans;
+            if((i % 3) == 0 && (i % 5) == 0) {
+                ans = "FizzBuzz";
+            } 
+            else if ((i % 3) == 0) {
+                ans = "Fizz"; 
+            } 
+            else if ((i % 5) == 0) {
+                ans = "Buzz"; 
+            } 
+            else {
+                ans = String.valueOf(i);
+            }
+            arr[i-1] = ans;
+        }
+        return arr;
     }
 
     public static int[] productExceptSelf(int[] nums) {
