@@ -9,11 +9,11 @@ import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(numJewelsInStones("aA", "aAAbbbb"));
+        System.out.println(isRectangleOverlap(new int[]{0,0,2,2}, 
+        new int[]{1,1,3,3}));
     }
 
     public static boolean isRectangleOverlap(int[] rec1, int[] rec2) {
-        
         return false;
     }
 
